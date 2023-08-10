@@ -1,0 +1,98 @@
+#logo {
+  padding-left: 10rem;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  background-color: #00aeff;
+}
+
+#top-nav {
+  font-size: 2rem;
+  margin-left: 8rem;
+}
+
+#top-nav a {
+  text-decoration: none;
+  color: white;
+  margin: 5rem 1.5rem;
+}
+
+#hero {
+  width: 1503px;
+  height: 990px;
+}
+
+#feel-the-fall {
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#feel-the-fall-heading {
+  font-size: 5rem;
+  margin-bottom: 0rem;
+}
+
+#lower-nav {
+  font-size: 2rem;
+  margin: 5rem;
+}
+
+#lower-nav a {
+  color: rgb(0, 60, 124);
+  padding: 1rem 2rem;
+  border: 0.2rem solid rgb(0, 60, 124);
+  text-decoration: none;
+}
+
+#lower-nav a:hover {
+  color: white;
+  background-color: rgb(0, 60, 124);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 101, 122);
+  padding: 3rem;
+}
+
+#footer-words {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#hero-img {
+  background: black url(Images/ultra-bungee-hero.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 30rem;
+  padding-bottom: 5rem;
+  justify-content: center;
+}
+
+div {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scroll behavior for the entire page */
+    overflow-y: scroll; /* Show scrollbar when needed */
+  }
+
+header {
+  position: fixed;
+  }
