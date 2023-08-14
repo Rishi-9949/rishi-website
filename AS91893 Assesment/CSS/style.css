@@ -1,10 +1,11 @@
 :root {
-  --main-color: #d3ad7f;
+  --main-color: #e29436;
   --black: #13131a;
-  --bg: #010103;
-  --border: .1rem solid rgba(255, 255, 255, .3);
+  --bg: #ffffff; /* Change the background color to white */
+  --border: .1rem solid rgba(0, 0, 0, .3); /* Change the border color to black */
 }
 
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@
   outline: none;
 }
 
+/* HTML styles */
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -37,15 +39,19 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+/* Body styles */
 body {
   font-family: 'Roboto', sans-serif;
   background: var(--bg);
+  color: var(--black); /* Change the text color to black */
 }
 
+/* Section styles */
 section {
   padding: 2rem 7%;
 }
 
+/* Heading styles */
 .heading {
   text-align: center;
   color: #fff;
@@ -59,27 +65,26 @@ section {
   text-transform: uppercase;
 }
 
-button,
-input[type="submit"] {
-  cursor: pointer;
+/* Navigation bar styles */
+.navbar {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
-.btn {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: .9rem 3rem;
-  font-size: 1.7rem;
-  color: #fff;
-  background: var(--main-color);
+.navbar a {
+  margin: 0 1.5rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
 }
 
-.btn:hover {
-  letter-spacing: .2rem;
-}
 
-/* global rules end */
 
-/* header section starts */
+
+/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -96,12 +101,13 @@ input[type="submit"] {
 
 .header .logo img {
   height: 6rem;
+  margin-left: -8rem;
 }
 
 .header .navbar a {
   margin: 0 1rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: #000000;
 }
 
 .header .navbar a:hover {
@@ -112,8 +118,8 @@ input[type="submit"] {
 
 .header .icons div {
   font-size: 2.5rem;
-  color: #fff;
-  margin-left: 2rem;
+  color: #000000;
+  margin-right: 2rem;
   cursor: pointer;
 }
 
@@ -121,10 +127,31 @@ input[type="submit"] {
   color: var(--main-color);
 }
 
-#menu-btn {
-  display: none;
+/* Styling for the login button */
+#login-btn {
+  background: linear-gradient(to bottom,  #000000, #6d6d6c);
+  color: var(--black); /* Change the text color to black */
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-left: 30rem;
+  position: relative;
 }
 
+#login-btn .fa {
+  margin-right: 0.5rem; /* Adjust spacing between icon and text */
+}
+
+#login-btn:hover {
+  background: linear-gradient(to bottom, #ffffff, #6a6a6a);
+  transform: scale(1.05);
+  color: #000000;
+}
+
+/* Scroll to top button styles */
 .stt {
   position: fixed;
   right: 1rem;
@@ -136,12 +163,16 @@ input[type="submit"] {
   box-shadow: 0 0.25rem 0.5rem 0 gray;
   opacity: 0.7;
 }
+
 .stt:hover {
   opacity: 0.8;
 }
+
 .stt:focus {
   opacity: 0.9;
 }
+
 .stt:active {
   opacity: 1;
 }
+

@@ -44,3 +44,4 @@ window.onscroll = () => {
     navbar.classList.remove("active");
     cartItems.classList.remove("active");
 };
+
