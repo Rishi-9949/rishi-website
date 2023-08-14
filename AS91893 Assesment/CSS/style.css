@@ -2,55 +2,96 @@
   --main-color: #d3ad7f;
   --black: #13131a;
   --bg: #010103;
-  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
 * {
-  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
   text-transform: capitalize;
-  transition: 2s linear;
+  transition: all .2s linear;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-padding-top: 9rem;
   scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
-  width: 0.8rem;
+  width: .8rem;
 }
 
 html::-webkit-scrollbar-track {
   background: transparent;
 }
+
 html::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 5rem;
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   background: var(--bg);
 }
 
+section {
+  padding: 2rem 7%;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--main-color);
+}
+
+.btn:hover {
+  letter-spacing: .2rem;
+}
+
+/* global rules end */
+
+/* header section starts */
 .header {
-  background: var(--bg);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background: var(--bg);
   padding: 1.5rem 7%;
   border-bottom: var(--border);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .header .logo img {
@@ -65,15 +106,15 @@ body {
 
 .header .navbar a:hover {
   color: var(--main-color);
-  border-bottom: 0.1rem solid var(--main-color);
-  padding-bottom: 0.5rem;
+  border-bottom: .1rem solid var(--main-color);
+  padding-bottom: .5rem;
 }
 
-.icons > i {
-  color: #fff;
-  cursor: pointer;
+.header .icons div {
   font-size: 2.5rem;
+  color: #fff;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
 .header .icons div:hover {
@@ -84,98 +125,23 @@ body {
   display: none;
 }
 
-.header .search-form{
-  position: absolute;
-  top:115%; right: 7%;
-  background: #fff;
-  width: 50rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  transform: scaleY(0);
-  transform-origin: top;
+.stt {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgb(128, 128, 255) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+  box-shadow: 0 0.25rem 0.5rem 0 gray;
+  opacity: 0.7;
 }
-
-.header .search-form.active{
-  transform: scaleY(1);
+.stt:hover {
+  opacity: 0.8;
 }
-
-.header .search-form input{
-height: 100%;
-width: 100%;
-font-size: 1.6rem;
-color:var(--black);
-padding: 1rem;
-text-transform: none;
+.stt:focus {
+  opacity: 0.9;
 }
-
-.header .search-form label{
-  cursor: pointer;
-  font-size: 2.2rem;
-  margin-right: 1.5em;
-  color:var(--black);
-} 
-.header .search-form label:hover{
-  color:var(--main-color);
-}
-
-
-/* media queries */
-@media (max-width: 991px){
-    html{
-    font-size: 55%;
-  }  
-
-  .header{
-    padding:1.5rem 2rem;
-  }
-}
-
-
-
-/* media queries */
-@media (max-width: 768px){
-  #menu-btn {
-    display: inline-block;
-  }  
-
-  .header .navbar{
-    position: absolute;
-    top: 100%; right:-100%; 
-    background: #fff;
-    width: 30rem;
-    height: calc(100vh - 9.5rem);
-  }
-
-  .header .navbar a{
-    color: var(--black);
-    display: block;
-    margin: 1.5rem;
-    padding:1.5rem;
-    font-size: 2rem;
-
-  }
-
-  .header .navbar active{
-    right: 0;
-  }
-
-  .header .search-form{
-    width: 90%;
-    right: 2rem;
-  }
-
-
-}
-
-
-/* media queries */
-@media (max-width: 450px){
-  html{
-  font-size: 55%;
-}  
-
-.header{
-  padding:1.5rem 2rem;
-}
+.stt:active {
+  opacity: 1;
 }
