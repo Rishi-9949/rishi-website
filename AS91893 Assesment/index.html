@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
       <script src="https://kit.fontawesome.com/14c282dceb.js" crossorigin="anonymous"></script>
       <script defer src="js/script.js"></script>
       <a href='#' class="stt"></a>
@@ -14,12 +15,16 @@
   </head>
 
   <body>
+    <div>
+      <h1 class="fancyText">Gallery</h1>
+    </div>
+
     <header class="header">
       <a href="#" class="logo">
-        <img src="./images/Maunga_Club_Black.png" alt="" />
+        <img src="./images/Maunga_Club_Black.png"  alt="" />
       </a>
 
-      <nav class="navbar">
+      <nav class="navbar" >
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#chalets">Chalets</a>
@@ -28,22 +33,54 @@
         <a href="#contact">Contact Us</a> 
       </nav>
 
-      <button id="login-btn">
-        <i class="fa fa-user"></i> Login
-      </button>
+      <div id="login-btn">
+        <a href="../AS91893 Assesment/pages/login.html" class="fa fa-user"></a> Login
+      </div>
 
 
       <div class="icons">
         <div class="fa-solid fa-bars"></div>
         
       </div>
-
-
-
-
     </header>
 
 
+    <br>
+
+
+    <div class="full-img" id="fullImgBox">
+      <img src="../AS91893 Assesment/images/kereru/cabin_exterior.jpg" id="fullImg">
+      <span onclick= "closefullImg()">X</span>
+    </div>
+
+    
+    <div class="img-gallery">
+      <img src="../AS91893 Assesment/images/kereru/cabin_exterior.jpg" onclick="openfullImg(this.src)">
+      <img src="/AS91893 Assesment/images/maunga_club_cabin.jpg" onclick="openfullImg(this.src)">
+      <img src="/AS91893 Assesment/images/mountain_view_light.jpg" onclick="openfullImg(this.src)">
+      <img src="/AS91893 Assesment/images/pukeko/chalet_exterior.jpg" onclick="openfullImg(this.src)">
+      <img src="/AS91893 Assesment/images/pukeko/chalet_view.jpg" onclick="openfullImg(this.src)">
+      <img src="/AS91893 Assesment/images/kakapo/cabin_view.jpg" onclick="openfullImg(this.src)">
+
+
+
+    </div>
+
+<script>
+  var fullImgBox = document.getElementById("fullImgBox");
+  var fullImg = document.getElementById("fullImg");
+
+  function openfullImg(pic){
+    fullImgBox.style.display = "flex";
+    fullImg.src = pic;
+  }
+  function closefullImg(){
+    fullImgBox.style.display = "none";
+  }
+</script>
+
 
   </body>
+
 </html>
+

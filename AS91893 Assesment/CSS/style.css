@@ -1,3 +1,17 @@
+
+.fancyText {
+  font-family: Sofia;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  padding: 1rem ;
+  margin: 5rem;
+  margin-top: 10rem;
+  font-weight: 900;
+  position: relative;
+}
+
+
 :root {
   --main-color: #e29436;
   --black: #13131a;
@@ -17,6 +31,7 @@
   border: none;
   outline: none;
 }
+
 
 /* HTML styles */
 html {
@@ -46,10 +61,7 @@ body {
   color: var(--black); /* Change the text color to black */
 }
 
-/* Section styles */
-section {
-  padding: 2rem 7%;
-}
+
 
 /* Heading styles */
 .heading {
@@ -70,6 +82,7 @@ section {
   font-weight: 500;
   display: flex;
   align-items: center;
+  
 }
 
 .navbar a {
@@ -90,7 +103,7 @@ section {
   justify-content: space-between;
   align-items: center;
   background: var(--bg);
-  padding: 1.5rem 7%;
+  padding: 1rem 7%;
   border-bottom: var(--border);
   position: fixed;
   top: 0;
@@ -135,7 +148,8 @@ section {
   font-size: 1.6rem;
   border-radius: 3rem;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
+  text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
   margin-left: 30rem;
   position: relative;
@@ -143,22 +157,26 @@ section {
 
 #login-btn .fa {
   margin-right: 0.5rem; /* Adjust spacing between icon and text */
+  color: #ffffff;
+  text-transform: none;
 }
 
 #login-btn:hover {
-  background: linear-gradient(to bottom, #ffffff, #6a6a6a);
-  transform: scale(1.05);
-  color: #000000;
+  background: linear-gradient(to bottom, #6d6d6c, #000000);
+  transform: scale(1.15);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
 }
 
 /* Scroll to top button styles */
 .stt {
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  right: 3rem;
+  bottom: 3rem;
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
+  border-radius: 60%;
   background: rgb(128, 128, 255) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
   box-shadow: 0 0.25rem 0.5rem 0 gray;
   opacity: 0.7;
@@ -175,4 +193,55 @@ section {
 .stt:active {
   opacity: 1;
 }
+
+
+.img-gallery{
+  width: 80%;
+  margin: 1px auto 1px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 30px;
+
+}
+
+.img-gallery img{
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-gallery img:hover{
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68, 76, 136, .2);
+}
+
+.full-img{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img{
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span{
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+
 
