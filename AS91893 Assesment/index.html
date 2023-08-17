@@ -6,81 +6,209 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-      <script src="https://kit.fontawesome.com/14c282dceb.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="./css/Chalets.css" />
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia"
+      />
+      <script
+        src="https://kit.fontawesome.com/14c282dceb.js"
+        crossorigin="anonymous"
+      ></script>
       <script defer src="js/script.js"></script>
-      <a href='#' class="stt"></a>
+      <a href="#" class="stt"></a>
       <title>Website</title>
     </head>
   </head>
 
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="./images/Maunga_Club_Black.png" alt="" />
+    </a>
+
+    <nav class="navbar">
+      <a href="#main-content">Home</a>
+      <a href="#section2">About</a>
+      <a href="section3">Chalets</a>
+      <a href="#section4">Membership</a>
+      <a href="#section5">Gallery</a>
+      <a href="#section6">Contact Us</a>
+    </nav>
+
+    <div id="login-btn">
+      <a href="./pages/login.html" class="fa fa-user"
+        >Login</a
+      >
+    </div>
+
+    <div class="icons">
+      <div class="fa-solid fa-bars"></div>
+    </div>
+  </header>
+
+  <br />
+
+  <!-- Home Page -->
+
   <body>
-    <div>
+    <div id="main-content">
+      <div class="concept concept-five word">
+        <h1 class="word">
+          <span class="char">M</span>
+          <span class="char">A</span>
+          <span class="char">U</span>
+          <span class="char">N</span>
+          <span class="char">G</span>
+          <span class="char">A</span>
+          <span class="char"> </span>
+          <span class="char">C</span>
+          <span class="char">L</span>
+          <span class="char">U</span>
+          <span class="char">B</span>
+        </h1>
+      </div>
+    </div>
+
+    <!--Home Page Ends Here-->
+
+    <!-- About Page -->
+
+    <div class="About" id="section2">
+      <h1 class="fancyText">About</h1>
+    </div>
+
+    <!--About Page Ends Here-->
+
+    <!-- Chalets Page -->
+
+
+    <div class="Chalets" id="section3">
+      <h1 class="fancyText">Chalets</h1>
+    </div>
+
+    <div class="chalets-imgs">
+      <img data-image="img1" src="./images/kakapo/bunk_room.jpg">
+
+   
+ 
+ 
+    <!-- Right Column -->
+    <div class="right-column">
+
+      <!-- Chalets Description -->
+      <div class="Chalets-description">
+        <span>First Chartlet</span>
+        <h1>Kakapo</h1>
+        <p>Experience our biggest chalet, complete with a spacious kitchen, dining, and living area, plus a variety of fantastic amenities.
+          Each chalet can accommodates a maximum of 10 adults and 30 children, ensuring enough space for your whole family or group.
+        </p>
+      </div>
+
+      <!-- Chalets Configuration -->
+      <div class="Chalets-configuration">
+
+        <!-- Chalets images -->
+        <div class="Chalets-images">
+          <span>Variation</span>
+          <div class="images-choose">
+            <div>
+              <input data-image="red" type="radio" id="red" name="variation" value="red" checked>
+              <label for="red"><img src="images/red.png" alt=""></label>
+            </div>
+            <div>
+              <input data-image="blue" type="radio" id="blue" name="variation" value="blue">
+              <label for="blue"><img src="images/blue.png" alt=""></label>
+            </div>
+            <div>
+              <input data-image="black" type="radio" id="black" name="variation" value="black">
+              <label for="black"><img src="images/black.png" alt=""></label>
+            </div>
+          </div>
+        </div>
+      </div>
+        <a href="#" class="book-btn">Book now</a>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+
+  <!--Chalets Page Ends Here-->
+
+    <!--Chalets Page Ends Here-->
+
+    <!-- Memebership Page -->
+
+    <div class="Memebership" id="section4">
+      <h1 class="fancyText">Memebership</h1>
+    </div>
+
+    <!--Memebership Page Ends Here-->
+
+    <!-- Gallery Page -->
+
+    <div class="gallery" id="section5">
       <h1 class="fancyText">Gallery</h1>
     </div>
 
-    <header class="header">
-      <a href="#" class="logo">
-        <img src="./images/Maunga_Club_Black.png"  alt="" />
-      </a>
-
-      <nav class="navbar" >
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#chalets">Chalets</a>
-        <a href="#membership">Membership</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a> 
-      </nav>
-
-      <div id="login-btn">
-        <a href="../AS91893 Assesment/pages/login.html" class="fa fa-user"></a> Login
-      </div>
-
-
-      <div class="icons">
-        <div class="fa-solid fa-bars"></div>
-        
-      </div>
-    </header>
-
-
-    <br>
-
-
     <div class="full-img" id="fullImgBox">
-      <img src="../AS91893 Assesment/images/kereru/cabin_exterior.jpg" id="fullImg">
-      <span onclick= "closefullImg()">X</span>
+      <img
+        src="../AS91893 Assesment/images/kereru/cabin_exterior.jpg"
+        id="fullImg"
+      />
+      <span onclick="closefullImg()">X</span>
     </div>
 
-    
     <div class="img-gallery">
-      <img src="../AS91893 Assesment/images/kereru/cabin_exterior.jpg" onclick="openfullImg(this.src)">
-      <img src="/AS91893 Assesment/images/maunga_club_cabin.jpg" onclick="openfullImg(this.src)">
-      <img src="/AS91893 Assesment/images/mountain_view_light.jpg" onclick="openfullImg(this.src)">
-      <img src="/AS91893 Assesment/images/pukeko/chalet_exterior.jpg" onclick="openfullImg(this.src)">
-      <img src="/AS91893 Assesment/images/pukeko/chalet_view.jpg" onclick="openfullImg(this.src)">
-      <img src="/AS91893 Assesment/images/kakapo/cabin_view.jpg" onclick="openfullImg(this.src)">
-
-
-
+      <img
+        src="./images/kereru/cabin_exterior.jpg"
+        onclick="openfullImg(this.src)"
+      />
+      <img
+        src="./images/maunga_club_cabin.jpg"
+        onclick="openfullImg(this.src)"
+      />
+      <img
+        src="./images/mountain_view_light.jpg"
+        onclick="openfullImg(this.src)"
+      />
+      <img
+        src="./images/pukeko/chalet_exterior.jpg"
+        onclick="openfullImg(this.src)"
+      />
+      <img
+        src="./images/pukeko/chalet_view.jpg"
+        onclick="openfullImg(this.src)"
+      />
+      <img
+        src="./images/kakapo/cabin_view.jpg"
+        onclick="openfullImg(this.src)"
+      />
     </div>
-
-<script>
-  var fullImgBox = document.getElementById("fullImgBox");
-  var fullImg = document.getElementById("fullImg");
-
-  function openfullImg(pic){
-    fullImgBox.style.display = "flex";
-    fullImg.src = pic;
-  }
-  function closefullImg(){
-    fullImgBox.style.display = "none";
-  }
-</script>
-
-
   </body>
 
-</html>
+  <script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
 
+    function openfullImg(pic) {
+      fullImgBox.style.display = "flex";
+      fullImg.src = pic;
+    }
+    function closefullImg() {
+      fullImgBox.style.display = "none";
+    }
+  </script>
+
+  <!-- Gallery Page Ends Here -->
+
+  <!-- About Page -->
+
+    <div class="About" id="section6">
+      <h1 class="fancyText">About</h1>
+    </div>
+  </body>
+
+  <!--About Page Ends Here-->
+</html>
