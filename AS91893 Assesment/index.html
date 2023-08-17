@@ -30,14 +30,14 @@
     <nav class="navbar">
       <a href="#main-content">Home</a>
       <a href="#section2">About</a>
-      <a href="section3">Chalets</a>
+      <a href="#section3">Chalets</a>
       <a href="#section4">Membership</a>
       <a href="#section5">Gallery</a>
       <a href="#section6">Contact Us</a>
     </nav>
 
     <div id="login-btn">
-      <a href="./pages/login.html" class="fa fa-user"
+      <a href="../AS91893 Assesment/pages/login.html" class="fa fa-user"
         >Login</a
       >
     </div>
@@ -70,6 +70,53 @@
       </div>
     </div>
 
+
+    <div class="page-section" id="page2">
+      <video autoplay loop muted class="background-video">
+        <source src="/images/website-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h1>Embrace the Journey</h1>
+      <h2>Unveil a World of Exclusive Delights</h2>
+      <p>Indulge in exquisite dining experiences, refreshing drinks, and exciting entertainment that will delight your senses. At our club, you're not just a member; you're part of a culinary and recreational journey.</p>
+    </div>
+    
+
+    <div class="home-section">
+      <div class="section-left">
+          <h1>01</h1>
+          <h3>Unleash Your Adventure</h3>
+          <br>
+          <p>Embark on a journey across 550 hectares
+              <br> 
+              of pristine skiing/snowboarding terrain, embracing
+              <br>
+              the enduring excitement of New Zealand's slopes.</p>
+      </div>
+  
+      <div class="section-center">
+          <h1>02</h1>
+          <h3>Create Lifelong Memories</h3>
+          <br>
+          <p>Experience the ultimate family bonding time amidst
+              <br> 
+              the enchanting landscape of 550 hectares,
+              <br>
+              offering the longest ski/snowboard season in New Zealand.</p>
+      </div>
+  
+      <div class="section-right">
+          <h1>03</h1>
+          <h3>Thrills on the Slopes</h3>
+          <br>
+          <p>Embark on exhilarating ski/snowboard sessions,
+              <br> 
+              where the snow whispers tales of adventure,
+              <br>
+              and the slopes offer boundless fun in New Zealand's snow paradise.</p>
+      </div>
+  </div>  
+  
     <!--Home Page Ends Here-->
 
     <!-- About Page -->
@@ -80,63 +127,49 @@
 
     <!--About Page Ends Here-->
 
-    <!-- Chalets Page -->
-
-
-    <div class="Chalets" id="section3">
+<!-- Chalets Page -->
+  <main class="Chalets" id="section3">
       <h1 class="fancyText">Chalets</h1>
+
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+      <img data-image="black" src="./images/kakapo/cabin_view.jpg" alt="">
+      <img data-image="blue" src="./images/kakapo/cabin_exterior.jpg" alt="">
+      <img data-image="red" class="active" src="./images/kakapo/bunk_room.jpg" alt="">
     </div>
 
-    <div class="chalets-imgs">
-      <img data-image="img1" src="./images/kakapo/bunk_room.jpg">
-
-   
- 
- 
     <!-- Right Column -->
     <div class="right-column">
 
-      <!-- Chalets Description -->
-      <div class="Chalets-description">
+      <!-- chalets Description -->
+      <div class="chalets-description">
         <span>First Chartlet</span>
         <h1>Kakapo</h1>
-        <p>Experience our biggest chalet, complete with a spacious kitchen, dining, and living area, plus a variety of fantastic amenities.
-          Each chalet can accommodates a maximum of 10 adults and 30 children, ensuring enough space for your whole family or group.
-        </p>
+        <br>
+        <p>Experience our biggest chalet, complete with a spacious kitchen, dining, and living area, plus a variety of fantastic amenities.</p>
+        <br>
+        <p>Each chalet can accommodates a maximum of 10 adults and 30 children, ensuring enough space for your whole family or group.</p>
       </div>
 
-      <!-- Chalets Configuration -->
-      <div class="Chalets-configuration">
-
-        <!-- Chalets images -->
-        <div class="Chalets-images">
-          <span>Variation</span>
-          <div class="images-choose">
-            <div>
-              <input data-image="red" type="radio" id="red" name="variation" value="red" checked>
-              <label for="red"><img src="images/red.png" alt=""></label>
-            </div>
-            <div>
-              <input data-image="blue" type="radio" id="blue" name="variation" value="blue">
-              <label for="blue"><img src="images/blue.png" alt=""></label>
-            </div>
-            <div>
-              <input data-image="black" type="radio" id="black" name="variation" value="black">
-              <label for="black"><img src="images/black.png" alt=""></label>
-            </div>
-          </div>
-        </div>
+    <!-- chalets Configuration -->
+  <div class="chalets-configuration">
+    <!-- chalets images -->
+    <div class="chalets-color">
+      <span>Variation</span>
       </div>
-        <a href="#" class="book-btn">Book now</a>
+    </div>
+  </div>
+        <br>
+        <a href="book.html" class="book-btn">Book now</a>
+      </div>
+    </div>
   </main>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
   <script src="script.js" charset="utf-8"></script>
+<!-- Chalets Page Ends Here -->
 
-  <!--Chalets Page Ends Here-->
-
-    <!--Chalets Page Ends Here-->
 
     <!-- Memebership Page -->
 
@@ -161,31 +194,17 @@
     </div>
 
     <div class="img-gallery">
-      <img
-        src="./images/kereru/cabin_exterior.jpg"
-        onclick="openfullImg(this.src)"
-      />
-      <img
-        src="./images/maunga_club_cabin.jpg"
-        onclick="openfullImg(this.src)"
-      />
-      <img
-        src="./images/mountain_view_light.jpg"
-        onclick="openfullImg(this.src)"
-      />
-      <img
-        src="./images/pukeko/chalet_exterior.jpg"
-        onclick="openfullImg(this.src)"
-      />
-      <img
-        src="./images/pukeko/chalet_view.jpg"
-        onclick="openfullImg(this.src)"
-      />
-      <img
-        src="./images/kakapo/cabin_view.jpg"
-        onclick="openfullImg(this.src)"
-      />
+      <img src="./images/kereru/cabin_exterior.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/maunga_club_cabin.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/mountain_view_light.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/pukeko/chalet_exterior.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/pukeko/chalet_view.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/kakapo/cabin_view.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/mountain_view_light.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/kereru/kitchen.jpg" onclick="openfullImg(this.src)" />
+      <img src="./images/kereru/adult_bedroom.jpg" onclick="openfullImg(this.src)" />
     </div>
+    
   </body>
 
   <script>
@@ -205,8 +224,9 @@
 
   <!-- About Page -->
 
-    <div class="About" id="section6">
-      <h1 class="fancyText">About</h1>
+  <body>
+    <div class="Contact Us" id="section6">
+      <h1 class="fancyText">Contact Us </h1>
     </div>
   </body>
 

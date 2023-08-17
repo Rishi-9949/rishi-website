@@ -1,89 +1,151 @@
-/* Basic Styling */
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-}
- 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-  display: flex;
+
+
+.Chalets:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+/* Columns */
+.left-column,
+.right-column {
+  width: 50%; /* Set both columns to 50% width */
+  float: left; /* Float columns side by side */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  padding: 0 15px; /* Add padding to columns */
+}
 
 /* Left Column */
-.chalets-imgs img {
+.left-column img {
   width: 100%;
-  position: absolute;
-
-  opacity: 0;
   transition: all 0.3s ease;
-}
- 
-.chalets-imgs img.active {
   opacity: 1;
 }
 
-/* Product Description */
-.product-description {
+/* Right Column */
+.right-column {
+  margin-top: 60px; /* Adjust margin-top as needed */
+}
+
+/* Right Column */
+/* chalets Description */
+.chalets-description {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 20px;
 }
-.product-description span {
+
+.chalets-description span {
   font-size: 12px;
   color: #358ED7;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
 }
-.product-description h1 {
+
+.chalets-description h1 {
   font-weight: 300;
   font-size: 52px;
-  color: #43484D;
+  color: #000000;
   letter-spacing: -2px;
 }
-.product-description p {
+
+.chalets-description p {
   font-size: 16px;
   font-weight: 300;
-  color: #86939E;
+  color: #000000;
   line-height: 24px;
 }
 
-/* Product Price */
-.product-price {
-  display: flex;
-  align-items: center;
+/* chalets Configuration */
+.chalets-images span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #86939E;
+  margin-bottom: 20px;
+  display: inline-block;
 }
- 
-.product-price span {
-  font-size: 26px;
-  font-weight: 300;
-  color: #43474D;
-  margin-right: 20px;
+
+/* chalets images */
+.chalets-images {
+  margin-bottom: 30px;
 }
- 
+
+.images-choose div {
+  display: inline-block;
+}
+
+.images-choose input[type="radio"] {
+  display: none;
+}
+
+.images-choose input[type="radio"] + label {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.images-choose input[type="radio"]#red + label {
+  background-image: url(./images/kakapo/cabin_view.jpg);
+}
+
+.images-choose input[type="radio"]#blue + label {
+  background-image: url(./images/kakapo/cabin_exterior.jpg);
+}
+
+.images-choose input[type="radio"]#black + label {
+  background-image: url(./images/kakapo/bunk_room.jpg);
+}
+
+.images-choose input[type="radio"]:checked + label {
+  border: 2px solid #86939E;
+}
+
+
 .book-btn {
   display: inline-block;
   background-color: #000000;
-  border-radius: 3rem;
-  border: solid;
+  border-radius: 20px;
   font-size: 16px;
   color: #FFFFFF;
   text-decoration: none;
   padding: 12px 30px;
-  transition: all .8s;
+  transition: all .3s;
+  border: 2px solid black;
+
 }
+
 .book-btn:hover {
   background-color: #ffffff;
   color: #000000;
-  transition: color 0.3s;
+  
 }
 
+/* Responsive */
+@media (max-width: 940px) {
+  .Chalets {
+    flex-direction: column;
+    margin-top: 60px;
+  }
 
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
 
+  .left-column img {
+    width: 300px;
+    top: -65px;
+  }
+}
 
-
-
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
+  }
+}
