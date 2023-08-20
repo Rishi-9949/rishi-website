@@ -6,7 +6,9 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/membership.css" />
       <link rel="stylesheet" href="./css/Chalets.css" />
+      <link rel="stylesheet" href="./membership.css">
 
       <link
         rel="stylesheet"
@@ -18,7 +20,7 @@
       ></script>
       <script defer src="js/script.js"></script>
       <a href="#" class="stt"></a>
-      <title>Website</title>
+      <title>Maunga Club</title>
     </head>
   </head>
 
@@ -40,10 +42,6 @@
       <a href="../AS91893 Assesment/pages/login.html" class="fa fa-user"
         >Login</a
       >
-    </div>
-
-    <div class="icons">
-      <div class="fa-solid fa-bars"></div>
     </div>
   </header>
 
@@ -127,55 +125,143 @@
 
     <!--About Page Ends Here-->
 
-<!-- Chalets Page -->
-  <main class="Chalets" id="section3">
+    
+    <!-- Chalets Page -->
+    <main class="Chalets" id="section3">
       <h1 class="fancyText">Chalets</h1>
-
-    <!-- Left Column / Headphones Image -->
-    <div class="left-column">
-      <img data-image="black" src="./images/kakapo/cabin_view.jpg" alt="">
-      <img data-image="blue" src="./images/kakapo/cabin_exterior.jpg" alt="">
-      <img data-image="red" class="active" src="./images/kakapo/bunk_room.jpg" alt="">
-    </div>
-
-    <!-- Right Column -->
-    <div class="right-column">
-
-      <!-- chalets Description -->
-      <div class="chalets-description">
-        <span>First Chartlet</span>
-        <h1>Kakapo</h1>
-        <br>
-        <p>Experience our biggest chalet, complete with a spacious kitchen, dining, and living area, plus a variety of fantastic amenities.</p>
-        <br>
-        <p>Each chalet can accommodates a maximum of 10 adults and 30 children, ensuring enough space for your whole family or group.</p>
-      </div>
-
-    <!-- chalets Configuration -->
-  <div class="chalets-configuration">
-    <!-- chalets images -->
-    <div class="chalets-color">
-      <span>Variation</span>
-      </div>
-    </div>
-  </div>
+    
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- chalets Description -->
+        <div class="chalets-description">
+          <span>First Chartlet</span>
+          <h1>Kakapo</h1>
+          <br>
+          <p>Experience our biggest chalet, complete with a spacious kitchen, dining, and living area, plus a variety of fantastic amenities.</p>
+          <br>
+          <p>Each chalet can accommodates a maximum of 10 adults and 30 children, ensuring enough space for your whole family or group.</p>
+        </div>
+    
+        <!-- chalets Configuration -->
+        <div class="chalets-configuration">
+          <!-- chalets images -->
+          <div class="chalets-color">
+            <span>Variation</span>
+          </div>
+        </div>
         <br>
         <a href="book.html" class="book-btn">Book now</a>
       </div>
-    </div>
-  </main>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-  <script src="script.js" charset="utf-8"></script>
-<!-- Chalets Page Ends Here -->
-
+      
+      <div class="card-wrapper">
+        <div class="card">
+          <!-- card left -->
+          <div class="product-imgs">
+            <div class="img-display">
+              <div class="img-showcase">
+                <img src="./images/kakapo/bunk_room.jpg">
+                <img src="./images/kakapo/cabin_exterior.jpg">
+                <img src="./images/kakapo/cabin_view.jpg">
+                <img src="./images/kakapo/hallway.jpg">
+              </div>
+            </div>
+            <div class="img-select">
+              <div class="img-item">
+                <a data-id="1">
+                  <img src="./images/kakapo/bunk_room.jpg">
+                </a>
+              </div>
+              <div class="img-item">
+                <a data-id="2">
+                  <img src="./images/kakapo/cabin_exterior.jpg">
+                </a>
+              </div>
+              <div class="img-item">
+                <a  data-id="3">
+                  <img src="./images/kakapo/cabin_view.jpg">
+                </a>
+              </div>
+              <div class="img-item">
+                <a data-id="4">
+                  <img src="./images/kakapo/hallway.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
 
     <!-- Memebership Page -->
 
     <div class="Memebership" id="section4">
       <h1 class="fancyText">Memebership</h1>
+      
     </div>
+
+    <!-- Grid -->
+  <div class="grid">
+    <div class="grid-membership">
+
+    </div>
+    <div class="grid1">
+      <h3>Peak View</h3>
+      <p>Ideal for smaller groups, offering stunning scenic views, with space for 12 adults and 6 children.</p>
+    </div>
+
+    <div class="grid2">
+      <h3>Alpine Chalet</h3>
+      <p>A spacious option accommodating up to 24 adults and 12 children, perfect for gatherings.</p>
+    </div>
+
+    <div class="grid3">
+      <h3>Summit Lodge Chalet</h3>
+      <p>The ultimate group experience, with room for 40 adults and 20 children, creating lasting mountain memories.</p>
+    </div>
+
+    <div class="grid4">
+      <h3>Your Journey</h3>
+      <p>Embark on your adventure with the Maunga Club, granting you access to exclusive chalets and unparalleled mountain experiences.</p>
+    </div>
+  </div>
+
+  <h1 class="membership-title">Become a Member</h1>
+    	<p class="membership-description">
+      Join our community and enjoy exclusive benefits and offers.
+      </p>
+      <br>
+      <br>
+      
+      <label for="name">Name:</label>
+          <input type="text" id="name" name="name" style="height: 40px;" /> <!-- Adjust the height value as needed -->
+          <br />
+      <label for="address">Address:</label>
+        <input type="text" id="address" name="address" style="height: 40px;" /> <!-- Adjust the height value as needed -->
+        <br/>
+      
+        <input type="file" id="proofOfID" onchange="updateSelectedFile('proofOfID')" />
+          <label for="proofOfID">
+          <i class="fas fa-upload"></i>Proof of ID (Driver's License)
+            <span id="selectedFileIconproofOfID" style="display: none;">
+            <i class="fas fa-check-circle success-icon"></i>Selected
+          </span>
+        </label>
+
+        <br>
+
+        <input type="file" id="proofOfAddress" onchange="updateSelectedFile('proofOfAddress')" />
+          <label for="proofOfAddress">
+          <i class="fas fa-upload"></i>Proof of Address
+          <span id="selectedFileIconproofOfAddress" style="display: none;">
+            <i class="fas fa-check-circle success-icon"></i>Selected
+          </span>
+        </label>
+      <br/>
+      <div class="button-container">
+        <button id="submitBtn" class="submit-button">Submit</button>
+        <button class="reset-button" onclick="resetForm();">Reset</button>
+      </div>
+
 
     <!--Memebership Page Ends Here-->
 
@@ -190,7 +276,7 @@
         src="../AS91893 Assesment/images/kereru/cabin_exterior.jpg"
         id="fullImg"
       />
-      <span onclick="closefullImg()">X</span>
+      <span onclick="closefullImg()">x</span>
     </div>
 
     <div class="img-gallery">
