@@ -224,40 +224,6 @@ body {
   border: 2px solid black;
 }
 
-/* About Page */
-.About {
-  background-image: linear-gradient(to bottom, #9fffb4, #ffffff);
-  color: #ffffff;
-  padding: 40px 0;
-}
-
-/* Chalets Page */
-.Chalets {
-  color: #ffffff;
-  padding: 40px 0;
-}
-
-/* Membership Page */
-.Memebership {
-  background-image: linear-gradient(to bottom, #9ff5ff, #ffffff);
-  color: #333;
-  padding: 40px 0;
-}
-
-/* Gallery Page */
-.gallery {
-  background-image: linear-gradient(to bottom, #ef9fff, #ffffff);
-  color: #333;
-  padding: 40px 0;
-}
-
-/* Contact Us Page */
-.Contact {
-  background-color: #f2f2f2;
-  background-image: linear-gradient(to bottom, #fed1d1, #ddd);
-  color: #333;
-  padding: 40px 0;
-}
 
 .home-section {
   width: 101%;
@@ -467,4 +433,98 @@ h1 {
   100% {
     transform: translateX(-300%);
   }
+}
+
+
+#About {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  justify-content: space-around;
+  font-family: Verdana;
+}
+#About img {
+  height: 220px;
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+#About-in {
+  width: 100%;
+  text-align: center;
+}
+#About-in h3 {
+  color: #000;
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+#About-in p {
+  color: #000;
+  font-size: 20px;
+  line-height: 26px;
+  width: 70%;
+  margin-left: 22rem;
+}
+
+#cards-container {
+  /* background-color: red; */
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 80%;
+  width: 25%;
+  /* background-color: blue; */
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+#card1 {
+  background-image: url(../images/kakapo/cabin_view.jpg);
+}
+#card2 {
+  background-image: url(../images/kereru/adult_bedroom.jpg);
+}
+#card3 {
+  background-image: url(../images/pukeko/chalet_exterior.jpg);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  padding: 20px;
+  padding-top: 10px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h4 {
+  color: #ffffff;
+  font-size: 30px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 800;
+}
+.overlay p {
+  color: #ffffff;
+  font-size: 18px;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover {
+  transform: rotate3d(-1, 1, 0, 20deg);
+  transform: scale(1.15);
+
 }
