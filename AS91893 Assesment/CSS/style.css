@@ -38,6 +38,7 @@ html {
   overflow-x: hidden;
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
+  height: 700rem;
 }
 
 html::-webkit-scrollbar {
@@ -65,6 +66,8 @@ body {
   font-weight: 500;
   display: flex;
   align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style:inherit  ;
 }
 
 .navbar a {

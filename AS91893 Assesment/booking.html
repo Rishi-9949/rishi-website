@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Chalets</title>
+</head>
+<body>
+    <div class="name">
+        <h1 class="fancyText">Book Your Chalets Now</h1>
+    </div>
+
+    <img src="./images/mountain_view_light.jpg">
+    <form method="post">
+        <div class="elem-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="visitor_name" placeholder="Your name" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+            <label for="email">Your E-mail</label>
+            <input type="email" id="email" name="visitor_email" placeholder="Your E-mail" required>
+        </div>
+        <div class="elem-group">
+            <label for="phone">Your Phone</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="Your Number"
+                pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <hr>
+        <div class="elem-group inlined">
+            <label for="adult">Adults</label>
+            <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+        </div>
+        <div class="elem-group inlined">
+            <label for="child">Children</label>
+            <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+        </div>
+        <div class="elem-group inlined">
+            <label for="checkin-date">Check-in Date</label>
+            <input type="date" id="checkin-date" name="checkin" required>
+        </div>
+        <div class="elem-group inlined">
+            <label for="checkout-date">Check-out Date</label>
+            <input type="date" id="checkout-date" name="checkout" required>
+        </div>
+        <div class="elem-group">
+            <label for="chalets-selection">Select Chalets </label>
+            <select id="chalets-selection" name="chalets-preference" required>
+                <option value="">Choose a Room from the List</option>
+                <option value="Kakapo">Kakapo</option>
+                <option value="Pukeko">Pukeko</option>
+                <option value="Kereru">Kereru</option>
+            </select>
+        </div>
+        <hr>
+        <div class="elem-group">
+            <label for="message">Anything Else?</label>
+            <textarea id="message" name="visitor_message"
+                placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <button type="submit">Book The Rooms</button>
+    </form>
+    <div id="success-message" style="display: none;">Booking Successful! Thank you for choosing us.</div>
+    <script>
+    var currentDateTime = new Date();
+    var year = currentDateTime.getFullYear();
+    var month = (currentDateTime.getMonth() + 1);
+    var date = currentDateTime.getDate();
+    var dayOfWeek = currentDateTime.getDay(); // 0 (Sunday) to 6 (Saturday)
+
+    // Calculate the next upcoming Friday
+    var daysUntilFriday = (5 - dayOfWeek + 7) % 7;
+    var nextFriday = new Date(year, month - 1, date + daysUntilFriday);
+
+    var formattedNextFriday = nextFriday.toISOString().slice(0, 10);
+
+    // Calculate the corresponding Sunday
+    var nextSunday = new Date(nextFriday);
+    nextSunday.setDate(nextSunday.getDate() + 2);
+    var formattedNextSunday = nextSunday.toISOString().slice(0, 10);
+
+    var checkinElem = document.querySelector("#checkin-date");
+    var checkoutElem = document.querySelector("#checkout-date");
+    var roomSelection = document.querySelector("#chalets-selection");
+    var adultsInput = document.querySelector("#adult");
+    var childrenInput = document.querySelector("#child");
+
+    
+
+    checkinElem.setAttribute("min", formattedNextFriday);
+    checkinElem.setAttribute("max", formattedNextSunday);
+
+    checkinElem.onchange = function () {
+        var selectedDate = new Date(this.value);
+        var checkoutDate = new Date(selectedDate);
+        checkoutDate.setDate(checkoutDate.getDate() + 2);
+
+        var formattedCheckoutDate = checkoutDate.toISOString().slice(0, 10);
+        checkoutElem.setAttribute("min", this.value);
+        checkoutElem.setAttribute("max", formattedCheckoutDate);
+    }
+        roomSelection.onchange = function () {
+            var selectedRoom = this.value;
+    
+            if (selectedRoom === "Kakapo") {
+                adultsInput.max = 10;
+                childrenInput.max = 30;
+            } else if (selectedRoom === "Pukeko") {
+                adultsInput.max = 6;
+                childrenInput.max = 15;
+            } else if (selectedRoom === "Kereru") {
+                adultsInput.max = 2;
+                childrenInput.max = 4;
+            }
+        }
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate a successful form submission
+            // You can replace this with your actual form submission logic
+            // For example: Sending data to a server using AJAX or handling the form on the server side
+            // After the submission is successful, show the success message
+            var successMessage = document.querySelector("#success-message");
+            successMessage.style.display = "block";
+
+            // Optionally, reset the form after submission
+            form.reset();
+        });
+    </script>    
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            height: 20rem;
+            width: 50rem;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        form {
+            margin-top: 50px;
+        }
+
+        div.elem-group {
+            margin: 20px 0;
+        }
+
+        div.elem-group.inlined {
+            width: 49%;
+            display: inline-block;
+            float: left;
+            margin-left: 1%;
+        }
+
+        label {
+            display: block;
+            font-family: 'Nanum Gothic';
+            padding-bottom: 10px;
+            font-size: 1.25em;
+        }
+
+        input,
+        select,
+        textarea {
+            border-radius: 2px;
+            border: 2px solid #38011c;
+            box-sizing: border-box;
+            font-size: 1.25em;
+            font-family: 'Nanum Gothic';
+            padding: 10px;
+            width: 30%; /* Make the inputs fill their container */
+        }
+
+        textarea {
+            height: 250px;
+        }
+
+        hr {
+            border: 1px dotted #ccc;
+        }
+
+        button {
+            height: 50px;
+            background: rgb(0, 0, 0);
+            border: none;
+            color: white;
+            font-size: 1.25em;
+            font-family: 'Nanum Gothic';
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border: 2px solid black;
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</body>
+</html>

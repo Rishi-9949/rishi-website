@@ -42,14 +42,25 @@ window.onscroll = () => {
     window.location.href = "pages/thankyou.html"; // Relative path to your "Thank You" page
   });
 
-  const imageSlider = document.querySelector('.image-slider');
-  const images = document.querySelectorAll('.image');
-  const thumbnails = document.querySelectorAll('.thumbnail');
-
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-      images.forEach(image => image.classList.remove('active'));
-      images[index].classList.add('active');
-    });
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    // You can customize the Fancybox options here
   });
-  
+
+  const contactForm = document.getElementById('contactForm');
+  const submitMessage = document.getElementById('submitMessage');
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Display the submit message
+    submitMessage.innerHTML = `Thank you, ${name}! Your message has been submitted.`;
+
+    // Clear form inputs
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  });

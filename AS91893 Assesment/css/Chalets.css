@@ -7,14 +7,15 @@
   background-color: #ffebdd;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  margin-top: 50px; 
+  margin-top: 50px;
+  margin-bottom: 50px; /* Add margin at the bottom for spacing */
   margin-left: 45rem;
 }
 
 .image-slider {
-  flex: 2;
+  flex: 1;
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 2s;
 }
 
 .image {
@@ -47,22 +48,21 @@
   color: #666;
 }
 
-.thumbnails {
-  flex: 0 0 20%; /* Adjusted width */
+.thumbnails-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start; /* Align to the left side */
-  margin: 0; /* Set margin to zero to join thumbnails together */
+  justify-content: center;
+  margin-top: 240px;
 }
 
-.thumbnail {
-  flex: 0 0 auto;
-  width: 100%; /* Adjusted width to fill the container */
-  height: auto; /* Adjusted height to maintain aspect ratio */
-  margin: 0; /* Set margin to zero to join thumbnails together */
-  cursor: pointer;
+.thumbnail-image {
+  margin: 0 10px;
 }
 
+.thumbnail-image img {
+  width: 100px; /* Adjust the width as needed */
+  height: 75px; /* Adjust the height as needed */
+  object-fit: cover;
+}
 .thumbnail img {
   width: 50%; /* Adjusted width to fill the thumbnail container */
   height: auto;
@@ -72,3 +72,23 @@
 .image:not(.active) {
   display: none;
 }
+
+/* Custom Home button styling */
+      .Book-Now {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 16px;
+        border: 2px solid #000000;
+        border-radius: 25px;
+        cursor: pointer;
+        width: 75px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-left: auto;
+      }
+
+      .Book-Now:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+      }
