@@ -64,3 +64,16 @@ window.onscroll = () => {
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
   });
+
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: {
+      type: "classic"
+    },
+    Toolbar: {
+      display:{
+        left:["infobar"],
+        middle: [],
+        right: ["close"]
+      }
+    }
+  });

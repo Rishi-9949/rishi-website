@@ -8,12 +8,12 @@
       <link rel="stylesheet" href="./css/style.css" />
       <link rel="stylesheet" href="./css/membership.css" />
       <link rel="stylesheet" href="./css/Chalets.css" />
-      <link rel="stylesheet" href="./css/membership.css">
       <link rel="stylesheet" href="./css/contact-us.css">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Sofia"
       />
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -43,7 +43,7 @@
     </nav>
   
     <div id="login-btn">
-      <a href="../AS91893 Assesment/pages/login.html" class="fa fa-user"
+      <a href="./pages/login.html" class="fa fa-user"
         >Login</a
       >
     </div>
@@ -178,29 +178,30 @@
     <!-- Container for Kakapo Chalet -->
     <div class="container">
       <div class="image-slider">
-        <div class="image active">
+        <div class="image-active">
           <a data-fancybox="gallery" href="./images/kakapo/bunk_room.jpg">
             <img src="./images/kakapo/bunk_room_thumb.jpg" />
           </a>
         </div>
+        <div class="thumbnails-container">
+          <div class="thumbnail-image">
+            <a data-fancybox="gallery" href="./images/kakapo/cabin_exterior.jpg">
+              <img src="./images/kakapo/cabin_exterior_thumb.jpg" alt="Thumbnail 2" />
+            </a>
+          </div>
+          <div class="thumbnail-image">
+            <a data-fancybox="gallery" href="./images/kakapo/cabin_view.jpg">
+              <img src="./images/kakapo/cabin_view_thumb.jpg" alt="Thumbnail 3" />
+            </a>
+          </div>
+          <div class="thumbnail-image">
+            <a data-fancybox="gallery" href="./images/kakapo/hallway.jpg">
+              <img src="./images/kakapo/hallway_thumb.jpg" alt="Thumbnail 4" />
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="thumbnails-container">
-        <div class="thumbnail-image">
-          <a data-fancybox="gallery" href="./images/kakapo/cabin_exterior.jpg">
-            <img src="./images/kakapo/cabin_exterior_thumb.jpg" alt="Thumbnail 2" />
-          </a>
-        </div>
-        <div class="thumbnail-image">
-          <a data-fancybox="gallery" href="./images/kakapo/cabin_view.jpg">
-            <img src="./images/kakapo/cabin_view_thumb.jpg" alt="Thumbnail 3" />
-          </a>
-        </div>
-        <div class="thumbnail-image">
-          <a data-fancybox="gallery" href="./images/kakapo/hallway.jpg">
-            <img src="./images/kakapo/hallway_thumb.jpg" alt="Thumbnail 4" />
-          </a>
-        </div>
-      </div>
+
       <div class="info">
         <h2>Stylish Shoes</h2>
         <p>
@@ -209,14 +210,14 @@
           optio ducimus impedit iste deserunt, consectetur totam enim assumenda
           ex accusantium.
         </p>
-        <a href="booking.html" class="Book-Now">Book Now</a>
+        <a href="./pages/login.html" class="Book-Now">Book Now</a>
       </div>
     </div>
 
     <!-- Container for Second Chalet -->
     <div class="container">
       <div class="image-slider">
-        <div class="image active">
+        <div class="image-active">
           <a data-fancybox="gallery" href="./images/kereru/adult_bedroom.jpg">
             <img src="./images/kereru/adult_bedroom_thumb.jpg" />
           </a>
@@ -247,26 +248,26 @@
           optio ducimus impedit iste deserunt, consectetur totam enim assumenda
           ex accusantium.
         </p>
-        <a href="booking.html" class="Book-Now">Book Now</a>
+        <a href="./pages/login.html" class="Book-Now">Book Now</a>
       </div>
     </div>
     <!-- Container for Third Chalet -->
      <div class="container">
       <div class="image-slider">
-        <div class="image active">
-          <a data-fancybox="gallery" href="./images/pukeko/adult_bedroom.jpg">
+        <div class="image-active">
+          <a data-fancybox="gallery" href="../images/pukeko/adult_bedroom.jpg">
             <img src="./images/pukeko/adult_bedroom_thumb.jpg" />
           </a>
         </div>
       </div>
       <div class="thumbnails-container">
         <div class="thumbnail-image">
-          <a data-fancybox="gallery" href="./images/pukeko/bathroom.jpg">
+          <a data-fancybox="gallery" href="../images/pukeko/bathroom.jpg">
             <img src="./images/pukeko/bathroom_thumb.jpg" alt="Thumbnail 8" />
           </a>
         </div>
         <div class="thumbnail-image">
-          <a data-fancybox="gallery" href="./images/pukeko/chalet_exterior.jpg">
+          <a data-fancybox="gallery" href="../images/pukeko/chalet_exterior.jpg">
             <img src="./images/pukeko/chalet_exterior_thumb.jpg" alt="Thumbnail 9" />
           </a>
         </div>
@@ -284,16 +285,9 @@
           optio ducimus impedit iste deserunt, consectetur totam enim assumenda
           ex accusantium.
         </p>
-        <a href="booking.html" class="Book-Now">Book Now</a>
+        <a href="./pages/login.html" class="Book-Now">Book Now</a>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind('[data-fancybox="gallery"]', {
-        // You can customize the Fancybox options here
-      });
-    </script>
-
     <!-- Memebership Page -->
 
     <div class="Memebership" id="section4">
@@ -457,5 +451,5 @@
   </div>
 </div>
 <!-- Contact Page Ends Here -->   
-  </body>
+</body>
 </html>

@@ -53,7 +53,6 @@
 }
 .contact-us .content .right-side{
   width: 75%;
-  margin-left: 75px;
 }
 .content .right-side .topic-text{
   font-size: 23px;
@@ -139,4 +138,8 @@
    width: 100%;
    margin-left: 0;
  }
+}
+
+input[type="text"] {
+  margin-left: 0rem;
 }
