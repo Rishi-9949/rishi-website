@@ -9,13 +9,10 @@ body {
 }
 
 .card-wrapper{
-    max-width: 1100rem;
+    max-width: 1000rem;
     margin: 0 auto;
   }
-  img{
-    width: 100%;
-    display: block;
-  }
+
   .img-display{
     overflow: hidden;
   }
@@ -160,6 +157,7 @@ body {
     display: -webkit-box;
     gap: 20px; /* Gap between columns */
     padding: 30px;
+    margin-left: 115px;
   }
   
   /* Individual grid items */
@@ -187,6 +185,10 @@ body {
   .grid4 {
     background-color: #000; /* Black */
     color: white;
+  }
+
+  .grid1 h3 , .grid2 h3{
+    color: #000;
   }
   .grid1 p, .grid2 p, .grid3 p, .grid4 p{
       display: block;
@@ -216,10 +218,12 @@ input[type="file"] {
 }
 
 input[type="text"] {
-    width: 400px; /* Set the width as needed */
-    margin-left: 46rem; 
-    border: 1px solid #575757;
+  width: 400px; /* Set the width as needed */
+  border: 1px solid #575757;
+  margin-left: 56rem;
 }
+
+
 
 label {
     display: inline-block;
@@ -235,7 +239,7 @@ label {
     box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35);
     border-radius: 3px;
     width: 400px;
-    margin-left: 46rem;
+    margin-left: 56rem;
 }
   
 label i {
@@ -280,7 +284,7 @@ label:active {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    margin-left: 30rem;
+    margin-left: 40rem;
 }
   
  /* Style for individual buttons */
@@ -300,7 +304,7 @@ button {
     color: #000000;
     letter-spacing: 2px;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
-    margin-left: 50rem;
+    margin-left: 60rem;
 }
 .membership-description {
     background-color: #3498db;
@@ -312,9 +316,9 @@ button {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 320px;
-    margin-left: 50rem;
+    margin-left: 60rem;
 }
 
 .reset-button{
-    margin-right: 30rem;
+    margin-right: 40rem;
 }

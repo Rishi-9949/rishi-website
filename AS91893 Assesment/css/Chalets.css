@@ -1,46 +1,67 @@
-
 .container {
-  position: relative;
   display: flex;
-  align-items: start;
-  width: 95%; /* Adjusted width to match your layout */
-  background-color: #ffebdd;
+  width: 80%; /* Adjusted width to match your layout */
+  height: 90vh;
+  background: #acb7f7;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-  margin-top: 50px;
-  margin-bottom: 50px; /* Add margin at the bottom for spacing */
-  margin-left: 47rem;
-  height: 380px;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35rem;
+  margin-bottom: -5rem;
+  margin-left: 78rem;
 }
-
-.image-slider {
-  flex: 1;
+.product{
+  width: 90%;
+  max-width: 600px;
   display: flex;
-  transition: transform 2s;
 }
 
-.image {
-  flex: 0 0 60%;
+.gallery-chalets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
 }
 
-.image img {
-  width: 150%; /* Adjusted width to fill the container */
-  height: auto; /* Adjusted height to maintain aspect ratio */
+.gallery-chalets {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-chalets img {
+  width: 40vh;
+  margin-left: 10px;
+  height: auto;
+  display: block;
+  object-fit: fill;
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  align-items: start; /* Align to the left side */
-  justify-content: flex-start; /* Align to the top */
-  padding: 10px; /* Adjusted padding */
-  flex: 2; /* Occupy remaining space */
+  flex-basis: 53%;
+  padding: 40px; /* Adjusted padding */
+  height: 65vh;
+  background: #ffffff;
+  padding-left: 30px;
+  box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  color: #777;
+}
+
+.info h1 {
+  font-size: 35px;
+  color: #333; /* Adjusted text color */
 }
 
 .info h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 25px;
   color: #333; /* Adjusted text color */
+  font-weight: 600;
+}
+
+.info h3{
+  color: #00d874;
+  margin-bottom: 20px;
 }
 
 .info p {
@@ -49,49 +70,33 @@
   color: #666;
 }
 
-.thumbnails-container {
+.info a{
+  background: #553ff0;
   display: flex;
-  justify-content: center;
-  margin-top: 260px;
-}
-
-.thumbnail-image {
-  margin: 0 10px;
-
-}
-
-.thumbnail-image img {
-  width: 100px; /* Adjust the width as needed */
-  height: 75px; /* Adjust the height as needed */
-  object-fit: cover;
-  
-}
-.thumbnail img {
-  width: 50%; /* Adjusted width to fill the thumbnail container */
-  height: auto;
-  margin: 0;
-}
-
-.image:not(.active) {
-  display: none;
-}
-
-.Book-Now {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #000000;
   color: #ffffff;
-  font-size: 16px;
-  border: 2px solid #000000;
-  border-radius: 25px;
+  font-size: 17px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  box-shadow: 0 10px 10px rgba(85, 63,240, 0.25);
   cursor: pointer;
-  width: 125px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-right: auto;
-  margin-top: 10px;
 }
 
-.Book-Now:hover {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+.info a:hover{
+  background: #ffffff;
+  color: #553ff0;
+  border: 2px solid #553ff0;
+  cursor: pointer;
 }
+
+.controls{
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+
