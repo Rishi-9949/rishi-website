@@ -1,17 +1,16 @@
-.container {
+.container11 {
   display: flex;
-  width: 80%; /* Adjusted width to match your layout */
+  width: 95%; /* Adjusted width to match your layout */
   height: 90vh;
   background: #acb7f7;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
   min-height: 80vh;
   align-items: center;
   justify-content: center;
-  margin-top: 35rem;
-  margin-bottom: -5rem;
-  margin-left: 78rem;
+  margin-top: 15rem;
+  margin-left: 35px;
 }
-.product{
+.product {
   width: 90%;
   max-width: 600px;
   display: flex;
@@ -59,7 +58,7 @@
   font-weight: 600;
 }
 
-.info h3{
+.info h3 {
   color: #00d874;
   margin-bottom: 20px;
 }
@@ -70,7 +69,7 @@
   color: #666;
 }
 
-.info a{
+.info a {
   background: #553ff0;
   display: flex;
   color: #ffffff;
@@ -83,20 +82,19 @@
   border-radius: 30px;
   border: 0;
   outline: 0;
-  box-shadow: 0 10px 10px rgba(85, 63,240, 0.25);
+  box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
   cursor: pointer;
 }
 
-.info a:hover{
+.info a:hover {
   background: #ffffff;
   color: #553ff0;
   border: 2px solid #553ff0;
   cursor: pointer;
 }
 
-.controls{
+.controls {
   position: absolute;
   bottom: 40px;
   right: 20px;
 }
-

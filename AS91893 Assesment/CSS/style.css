@@ -354,7 +354,7 @@ h1 {
 }
 
 .img-gallery {
-  width: 80%;
+  width: 90%;
   margin: 1px auto 1px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -468,7 +468,7 @@ h1 {
 }
 #About-in h3 {
   color: #000;
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 800;
   margin-bottom: 30px;
 }
@@ -481,7 +481,7 @@ h1 {
 }
 #cards-container {
   /* background-color: red; */
-  height: 60vh;
+  height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,7 +519,7 @@ h1 {
 }
 .overlay h4 {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 26px;
   text-transform: uppercase;
   white-space: nowrap;
   font-weight: 800;
@@ -623,12 +623,11 @@ div.social {
 .footer-menu a:hover, .social i:hover{
   color: #c7940a;
 }
-.row.copyright{
-  margin-left: 10px;
-}
+
 .copyright p {
   font-size: 0.9em;
   text-align: right;
+  padding: 10px;
 }
 
 @media screen and (max-width: 850px) {

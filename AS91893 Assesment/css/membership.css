@@ -157,7 +157,7 @@ body {
     display: -webkit-box;
     gap: 20px; /* Gap between columns */
     padding: 30px;
-    margin-left: 115px;
+    margin-left: 75px;
   }
   
   /* Individual grid items */
@@ -196,7 +196,8 @@ body {
       margin-block-end: 1em;
       margin-inline-start: 0px;
       margin-inline-end: 0px;
-      font-size: 13px;
+      font-size: 15px;
+      font-weight: 550;
   }
   .grid1 h3, .grid2 h3, .grid3 h3, .grid4 h3{
     margin: 10;

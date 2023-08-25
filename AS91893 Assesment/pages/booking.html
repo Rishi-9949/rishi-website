@@ -62,46 +62,53 @@
     </form>
     <div id="success-message" style="display: none;">Booking Successful! Thank you for choosing us.</div>
     <script>
-    var currentDateTime = new Date();
-    var year = currentDateTime.getFullYear();
-    var month = (currentDateTime.getMonth() + 1);
-    var date = currentDateTime.getDate();
-    var dayOfWeek = currentDateTime.getDay(); // 0 (Sunday) to 6 (Saturday)
-
-    // Calculate the next upcoming Friday
-    var daysUntilFriday = (5 - dayOfWeek + 7) % 7;
-    var nextFriday = new Date(year, month - 1, date + daysUntilFriday);
-
-    var formattedNextFriday = nextFriday.toISOString().slice(0, 10);
-
-    // Calculate the corresponding Sunday
-    var nextSunday = new Date(nextFriday);
-    nextSunday.setDate(nextSunday.getDate() + 2);
-    var formattedNextSunday = nextSunday.toISOString().slice(0, 10);
-
-    var checkinElem = document.querySelector("#checkin-date");
-    var checkoutElem = document.querySelector("#checkout-date");
-    var roomSelection = document.querySelector("#chalets-selection");
-    var adultsInput = document.querySelector("#adult");
-    var childrenInput = document.querySelector("#child");
-
-    
-
-    checkinElem.setAttribute("min", formattedNextFriday);
-    checkinElem.setAttribute("max", formattedNextSunday);
-
-    checkinElem.onchange = function () {
-        var selectedDate = new Date(this.value);
-        var checkoutDate = new Date(selectedDate);
-        checkoutDate.setDate(checkoutDate.getDate() + 2);
-
-        var formattedCheckoutDate = checkoutDate.toISOString().slice(0, 10);
-        checkoutElem.setAttribute("min", this.value);
-        checkoutElem.setAttribute("max", formattedCheckoutDate);
-    }
+        var currentDateTime = new Date();
+        var year = currentDateTime.getFullYear();
+        var month = currentDateTime.getMonth();
+        var date = currentDateTime.getDate();
+        var dayOfWeek = currentDateTime.getDay(); // 0 (Sunday) to 6 (Saturday)
+        
+        // Calculate the next upcoming Friday, Saturday, or Sunday
+        var daysUntilNextCheckin = (5 - dayOfWeek + 7) % 7; // Find the nearest Friday
+        if (daysUntilNextCheckin > 2) {
+            daysUntilNextCheckin = 7 - daysUntilNextCheckin; // Adjust for Saturday or Sunday
+        }
+        var nextCheckin = new Date(year, month, date + daysUntilNextCheckin);
+        
+        var formattedNextCheckin = nextCheckin.toISOString().slice(0, 10);
+        
+        var checkinElem = document.querySelector("#checkin-date");
+        var roomSelection = document.querySelector("#chalets-selection");
+        var adultsInput = document.querySelector("#adult");
+        var childrenInput = document.querySelector("#child");
+        
+        checkinElem.setAttribute("min", formattedNextCheckin);
+        
+        checkinElem.onchange = function () {
+            var selectedDate = new Date(this.value);
+            var dayOfWeek = selectedDate.getDay();
+        
+            // If the selected check-in date is not a Friday, Saturday, or Sunday, adjust it to the next available Friday
+            if (dayOfWeek !== 5 && dayOfWeek !== 6 && dayOfWeek !== 0) {
+                var daysUntilNextFriday = (5 - dayOfWeek + 7) % 7; // Find the next Friday
+                selectedDate.setDate(selectedDate.getDate() + daysUntilNextFriday);
+        
+                var formattedSelectedDate = selectedDate.toISOString().slice(0, 10);
+                this.value = formattedSelectedDate;
+            }
+        
+            // Update the checkout date based on the adjusted check-in date
+            var checkoutDate = new Date(selectedDate);
+            checkoutDate.setDate(checkoutDate.getDate() + 2);
+        
+            var formattedCheckoutDate = checkoutDate.toISOString().slice(0, 10);
+            checkoutElem.setAttribute("min", this.value);
+            checkoutElem.setAttribute("max", formattedCheckoutDate);
+        }
+        
         roomSelection.onchange = function () {
             var selectedRoom = this.value;
-    
+        
             if (selectedRoom === "Kakapo") {
                 adultsInput.max = 10;
                 childrenInput.max = 30;
@@ -113,21 +120,25 @@
                 childrenInput.max = 4;
             }
         }
+        
         var form = document.querySelector("form");
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent the default form submission
-
+        
             // Simulate a successful form submission
             // You can replace this with your actual form submission logic
             // For example: Sending data to a server using AJAX or handling the form on the server side
             // After the submission is successful, show the success message
             var successMessage = document.querySelector("#success-message");
             successMessage.style.display = "block";
-
+        
             // Optionally, reset the form after submission
             form.reset();
         });
-    </script>    
+    </script>
+        
+
+            
     <style>
         body {
             text-align: center;

@@ -5,12 +5,6 @@ heroButton.addEventListener('click', function() {
   heroImage.classList.toggle('active');
 });
 
-// remove class active on scroll window 
-window.onscroll = () => { 
-    searchForm.classList.remove("active");
-    navbar.classList.remove("active");
-    cartItems.classList.remove("active");
-};
   
   function resetForm() {
     const selectedFileIconProofOfID = document.getElementById("selectedFileIconproofOfID");
@@ -42,9 +36,7 @@ window.onscroll = () => {
     window.location.href = "pages/thankyou.html"; // Relative path to your "Thank You" page
   });
 
-  Fancybox.bind('[data-fancybox="gallery"]', {
-    // You can customize the Fancybox options here
-  });
+
 
   const contactForm = document.getElementById('contactForm');
   const submitMessage = document.getElementById('submitMessage');
