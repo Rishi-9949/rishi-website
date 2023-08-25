@@ -1,3 +1,4 @@
+/* Main container for the product display */
 .container11 {
   display: flex;
   width: 95%; /* Adjusted width to match your layout */
@@ -10,24 +11,25 @@
   margin-top: 15rem;
   margin-left: 35px;
 }
+
+/* Styling for individual product container */
 .product {
   width: 90%;
   max-width: 600px;
   display: flex;
 }
 
+/* Styling for the gallery of chalet images */
 .gallery-chalets {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
-}
-
-.gallery-chalets {
   position: relative;
   overflow: hidden;
 }
 
+/* Styling for individual chalet images */
 .gallery-chalets img {
   width: 40vh;
   margin-left: 10px;
@@ -36,6 +38,7 @@
   object-fit: fill;
 }
 
+/* Styling for the information section */
 .info {
   flex-basis: 53%;
   padding: 40px; /* Adjusted padding */
@@ -47,6 +50,7 @@
   color: #777;
 }
 
+/* Styling for different heading levels */
 .info h1 {
   font-size: 35px;
   color: #333; /* Adjusted text color */
@@ -63,12 +67,14 @@
   margin-bottom: 20px;
 }
 
+/* Styling for paragraphs */
 .info p {
   font-size: 16px;
   line-height: 1.5;
   color: #666;
 }
 
+/* Styling for links */
 .info a {
   background: #553ff0;
   display: flex;
@@ -86,6 +92,7 @@
   cursor: pointer;
 }
 
+/* Styling for link hover state */
 .info a:hover {
   background: #ffffff;
   color: #553ff0;
@@ -93,6 +100,7 @@
   cursor: pointer;
 }
 
+/* Styling for control buttons */
 .controls {
   position: absolute;
   bottom: 40px;
