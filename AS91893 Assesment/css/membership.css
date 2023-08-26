@@ -98,7 +98,7 @@ body {
   }
   
   .chalets-description h1 {
-    font-weight: 300px;
+    font-weight: 300;
     font-size: 36px;
     color: #000000;
     margin-top: 0;
@@ -106,7 +106,7 @@ body {
   
   .chalets-description p {
     font-size: 16px;
-    font-weight: 300px;
+    font-weight: 300;
     color: #000000;
     line-height: 24px;
   }
@@ -157,7 +157,6 @@ body {
     display: -webkit-box;
     gap: 20px; /* Gap between columns */
     padding: 30px;
-    margin-left: 75px;
   }
   
   /* Individual grid items */
@@ -200,7 +199,6 @@ body {
       font-weight: 550;
   }
   .grid1 h3, .grid2 h3, .grid3 h3, .grid4 h3{
-    margin: 10;
     text-decoration: underline;
     font-size: 24px; /* Increase font size for a bigger look */
   }
@@ -221,7 +219,7 @@ input[type="file"] {
 input[type="text"] {
   width: 400px; /* Set the width as needed */
   border: 1px solid #575757;
-  margin-left: 56rem;
+  margin-left: 53rem;
 }
 
 
@@ -240,7 +238,7 @@ label {
     box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35);
     border-radius: 3px;
     width: 400px;
-    margin-left: 56rem;
+    margin-left: 53rem;
 }
   
 label i {
@@ -254,7 +252,6 @@ label:active {
 }
   
 #card {
-    position: center;
     display: flex;
     font-size: 15px;
     margin: 40px auto;
@@ -305,7 +302,7 @@ button {
     color: #000000;
     letter-spacing: 2px;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
-    margin-left: 60rem;
+    margin-left: 12rem;
 }
 .membership-description {
     background-color: #3498db;
@@ -317,9 +314,9 @@ button {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 320px;
-    margin-left: 60rem;
+    margin-left: 55rem;
 }
 
 .reset-button{
-    margin-right: 40rem;
+    margin-right: 32rem;
 }

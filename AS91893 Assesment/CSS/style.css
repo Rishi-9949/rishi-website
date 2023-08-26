@@ -137,7 +137,7 @@ body {
 }
 
 /* Scroll to top button styles */
-.stt {
+.top-button {
   position: fixed;
   right: 3rem;
   bottom: 3rem;
@@ -147,19 +147,19 @@ body {
   background: rgb(255, 128, 128)
     url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E")
     center no-repeat;
-  box-shadow: 2 0.5rem 0.5rem 2 gray;
+  box-shadow: 2px 0.5rem 0.5rem 2px gray;
   opacity: 0.8;
 }
 
-.stt:hover {
+.top-button:hover {
   opacity: 1;
 }
 
-.stt:focus {
+.top-button:focus {
   opacity: 0.9;
 }
 
-.stt:active {
+.top-button:active {
   opacity: 1;
 }
 
@@ -519,7 +519,7 @@ h1 {
 }
 .overlay h4 {
   color: #ffffff;
-  font-size: 26px;
+  font-size: 24px;
   text-transform: uppercase;
   white-space: nowrap;
   font-weight: 800;
@@ -606,7 +606,7 @@ div.social {
 }
 
 .copyright {
-  padding: 0.em 2em;
+  padding: 0rem 2rem;
   background-color: #25262e;
 
 }
@@ -634,4 +634,74 @@ div.social {
   .row.primary {
     grid-template-columns: 1fr;
   }
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+form {
+  margin-top: 50px;
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px solid #38011c;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  padding: 10px;
+  width: 30%; /* Make the inputs fill their container */
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid black;
+  background: #fff;
+  color: #000;
 }

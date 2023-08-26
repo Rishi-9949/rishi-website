@@ -135,6 +135,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-left: 20px;
+  width: auto;
 }
 
 /* Styling for submit button hover state */
