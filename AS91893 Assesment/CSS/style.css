@@ -39,7 +39,6 @@ html {
   overflow-x: hidden;
   scroll-padding-top: 8rem;
   scroll-behavior: smooth;
-  height: 750rem;
 }
 
 html::-webkit-scrollbar {
@@ -628,6 +627,7 @@ div.social {
   font-size: 0.9em;
   text-align: right;
   padding: 10px;
+  color: #fff;
 }
 
 @media screen and (max-width: 850px) {
@@ -642,9 +642,11 @@ body {
   padding: 0;
 }
 
-img {
+.head-image img {
   border-radius: 15px;
   object-fit: cover;
+  height: 450px;
+  width: 90%;
 }
 
 form {
